@@ -9,4 +9,4 @@ The sample app is a web site for a fictional Contoso University. It includes fun
 - C#
 - ASP.NET MVC
 - Entity Framework
-- SQLite
+- SQL Server
