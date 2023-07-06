@@ -30,6 +30,7 @@ namespace ContosoUniversity
                 try
                 {
                     var context = services.GetRequiredService<SchoolContext>();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
