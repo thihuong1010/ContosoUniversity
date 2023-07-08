@@ -34,6 +34,9 @@ namespace ContosoUniversity.Controllers
             }
 
             var student = await _context.Students
+                .Include(s => s.Enrollments) // cause the context to load the Student.Enrollments
+                    .ThenInclude(e => e.Course) // and within each enrollment the Enrollment.Course 
+                .AsNoTracking() 
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (student == null)
             {
