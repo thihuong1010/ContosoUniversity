@@ -1,22 +1,23 @@
-﻿using System;
+﻿using ContosoUniversity.Models;
+using System;
 using System.Linq;
-using ContosoUniversity.Models;
+
 namespace ContosoUniversity.Data
 {
-	public static class DbInitializer
-	{
-		public static void Initialize(SchoolContext context)
-		{
-			context.Database.EnsureCreated();
+    public static class DbInitializer
+    {
+        public static void Initialize(SchoolContext context)
+        {
+            context.Database.EnsureCreated();
 
-			// Look for any student
-			if (context.Students.Any())
-			{
-				return; // DB has been seed
-			}
+            // Look for any students.
+            if (context.Students.Any())
+            {
+                return;   // DB has been seeded
+            }
 
-			var students = new Student[]
-			{
+            var students = new Student[]
+            {
             new Student{FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01")},
             new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01")},
             new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
@@ -26,11 +27,11 @@ namespace ContosoUniversity.Data
             new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
             new Student{FirstMidName="Nino",LastName="Olivetto",EnrollmentDate=DateTime.Parse("2005-09-01")}
             };
-			foreach (Student s in students)
-			{
-				context.Students.Add(s);
-			}
-			context.SaveChanges();
+            foreach (Student s in students)
+            {
+                context.Students.Add(s);
+            }
+            context.SaveChanges();
 
             var courses = new Course[]
             {
@@ -50,18 +51,18 @@ namespace ContosoUniversity.Data
 
             var enrollments = new Enrollment[]
             {
-            new Enrollment{StudentID=1,CourseID=1050,Grade=Grade.A},
-            new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C},
-            new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B},
-            new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B},
-            new Enrollment{StudentID=2,CourseID=3141,Grade=Grade.F},
-            new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F},
-            new Enrollment{StudentID=3,CourseID=1050},
-            new Enrollment{StudentID=4,CourseID=1050},
-            new Enrollment{StudentID=4,CourseID=4022,Grade=Grade.F},
-            new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C},
-            new Enrollment{StudentID=6,CourseID=1045},
-            new Enrollment{StudentID=7,CourseID=3141,Grade=Grade.A},
+            new Enrollment{StudentID=58,CourseID=1050,Grade=Grade.A},
+            new Enrollment{StudentID=58,CourseID=4022,Grade=Grade.C},
+            new Enrollment{StudentID=58,CourseID=4041,Grade=Grade.B},
+            new Enrollment{StudentID=60,CourseID=1045,Grade=Grade.B},
+            new Enrollment{StudentID=60,CourseID=3141,Grade=Grade.F},
+            new Enrollment{StudentID=60,CourseID=2021,Grade=Grade.F},
+            new Enrollment{StudentID=59,CourseID=1050},
+            new Enrollment{StudentID=61,CourseID=1050},
+            new Enrollment{StudentID=61,CourseID=4022,Grade=Grade.F},
+            new Enrollment{StudentID=64,CourseID=4041,Grade=Grade.C},
+            new Enrollment{StudentID=65,CourseID=1045},
+            new Enrollment{StudentID=59,CourseID=3141,Grade=Grade.A},
             };
             foreach (Enrollment e in enrollments)
             {
@@ -69,6 +70,5 @@ namespace ContosoUniversity.Data
             }
             context.SaveChanges();
         }
-	}
+    }
 }
-

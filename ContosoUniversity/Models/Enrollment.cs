@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-
-namespace ContosoUniversity.Models
+﻿namespace ContosoUniversity.Models
 {
     public enum Grade
     {
