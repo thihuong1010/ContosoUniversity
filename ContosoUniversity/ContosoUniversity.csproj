@@ -18,8 +18,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Data\" />
+    <None Remove="Models\SchoolViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Models\SchoolViewModels\" />
   </ItemGroup>
 </Project>
