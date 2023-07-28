@@ -10,3 +10,6 @@ The sample app is a web site for a fictional Contoso University. It includes fun
 - ASP.NET MVC
 - Entity Framework
 - SQL Server
+
+# The application is deplyed to Azure app service
+Link: https://contosouniversitybyhuong.azurewebsites.net
