@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ContosoUniversity.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 
 namespace ContosoUniversity
 {
@@ -33,6 +34,9 @@ namespace ContosoUniversity
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddControllersWithViews();
+
+            // Enable Razor runtime compilation
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
