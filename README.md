@@ -11,5 +11,9 @@ The sample app is a web site for a fictional Contoso University. It includes fun
 - Entity Framework
 - SQL Server
 
+# Data model
+![diagram](https://github.com/thihuong1010/ContosoUniversity/assets/65859562/a5c32ddb-7a08-4bcd-9a71-7b1acd5fc618)
+
+
 # The application is deplyed to Azure app service
 Link: https://contosouniversitybyhuong.azurewebsites.net
