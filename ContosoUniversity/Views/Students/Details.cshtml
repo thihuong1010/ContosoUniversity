@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Details";
 }
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="~/css/style.css">
 
 <h1>Details</h1>
 
@@ -40,19 +42,19 @@
         <dd class="col-sm-10">
             <table class="table">
                 <tr>
-                    <th>Course Title</th>
-                    <th>Grade</th>
+                    <th class="custom-th">Course Title</th>
+                    <th class="custom-th">Grade</th>
                 </tr>
                 @foreach (var item in Model.Enrollments)
                 {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Course.Title)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Grade)
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Course.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Grade)
+                        </td>
+                    </tr>
                 }
             </table>
         </dd>

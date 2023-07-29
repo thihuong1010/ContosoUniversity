@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Courses";
 }
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="~/css/style.css">
 
 <h1>Courses</h1>
 
@@ -10,25 +12,26 @@
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CourseID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Credits)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Department)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
+
+    <tr>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.CourseID)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.Credits)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th class="custom-th"></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CourseID)
@@ -48,6 +51,6 @@
                 <a asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
             </td>
         </tr>
-}
-    </tbody>
+    }
+
 </table>

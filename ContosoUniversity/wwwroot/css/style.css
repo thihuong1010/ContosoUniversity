@@ -12,3 +12,56 @@
 .purpletext {
     color: #4b4766
 }
+
+/*table style*/
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Apply styles to the th elements with the "custom-th" class */
+.custom-th {
+    background-color: #97ecf1;
+}
+
+/* Add an alternate background color for the table rows */
+tr:nth-child(odd) {
+    background-color: #fdf5fd;
+}
+
+/* Style the table borders */
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+/* button */
+.btn {
+    /* Add common button styles */
+    display: inline-block;
+    padding: 8px 16px; /* Reduce padding for a smaller button */
+    font-size: 14px; /* Reduce font size for a smaller button */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+/* Style the button on hover */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style the button on focus (when clicked) */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
