@@ -6,7 +6,8 @@
 .info1 {
     background-color: #fce8fc;
     padding: 10px;
-    border-radius: 5px
+    border-radius: 5px;
+    margin: 10px
 }
 
 .purpletext {
@@ -64,4 +65,12 @@ table, th, td {
 .btn:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    /* Hide elements with the "hide-mobile" class on mobile devices */
+    .hide-mobile {
+        display: none;
+    }
 }

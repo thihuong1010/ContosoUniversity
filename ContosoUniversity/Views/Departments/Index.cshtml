@@ -12,18 +12,17 @@
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
-
     <tr>
         <th class="custom-th">
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th class="custom-th">
+        <th class="custom-th hide-mobile">
             @Html.DisplayNameFor(model => model.Budget)
         </th>
         <th class="custom-th">
             @Html.DisplayNameFor(model => model.StartDate)
         </th>
-        <th class="custom-th">
+        <th class="custom-th" style="display: none">
             @Html.DisplayNameFor(model => model.RowVersion)
         </th>
         <th class="custom-th">
@@ -38,13 +37,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
+            <td class="hide-mobile">
                 @Html.DisplayFor(modelItem => item.Budget)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
-            <td>
+            <td style="display: none">
                 @Html.DisplayFor(modelItem => item.RowVersion)
             </td>
             <td>
@@ -57,5 +56,4 @@
             </td>
         </tr>
     }
-
 </table>
