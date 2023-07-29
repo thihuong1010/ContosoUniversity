@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Departments";
 }
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="~/css/style.css">
 
 <h1>Departments</h1>
 
@@ -10,28 +12,28 @@
     <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Budget)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RowVersion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Administrator)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
+
+    <tr>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.Budget)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </th>
+        <th class="custom-th">
+            @Html.DisplayNameFor(model => model.Administrator)
+        </th>
+        <th class="custom-th"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -54,6 +56,6 @@
                 <a asp-action="Delete" asp-route-id="@item.DepartmentID">Delete</a>
             </td>
         </tr>
-}
-    </tbody>
+    }
+
 </table>
