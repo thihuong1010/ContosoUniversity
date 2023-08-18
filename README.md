@@ -18,5 +18,5 @@ The sample app is a web site for a fictional Contoso University. It includes fun
 # The application is deplyed to Azure app service
 Link: https://contosouniversitybyhuong.azurewebsites.net
 
-#Tutorial link
+# Tutorial link
 https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-7.0
